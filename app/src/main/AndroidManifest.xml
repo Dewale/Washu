@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.cpjk.washu">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/small_icon_washu"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CustomerActivity"
+            android:label="@string/title_activity_customer"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CustomerCreateOrderActivity"
+            android:label="@string/title_activity_customer_create_order"
+            android:parentActivityName=".CustomerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerActivity" />
+        </activity>
+        <activity
+            android:name=".SelectWashTypeActivity"
+            android:label="@string/title_activity_select_wash_type"
+            android:parentActivityName=".CustomerCreateOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerCreateOrderActivity" />
+        </activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:parentActivityName=".CustomerCreateOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerCreateOrderActivity" />
+        </activity>
+        <activity android:name=".OrderCompleteActivity">
+            android:name=".OrderCompleteActivity"
+            android:label="@string/title_activity_order_complete"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CustomerEditProfileActivity"
+            android:label="@string/title_activity_customer_edit_profile"
+            android:parentActivityName=".CustomerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerActivity" />
+        </activity>
+        <activity
+            android:name=".WasherActivity"
+            android:label="@string/title_activity_washer"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PendingOrdersActivity"
+            android:label="@string/title_activity_pending_orders"
+            android:parentActivityName=".WasherActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.WasherActivity" />
+        </activity>
+    </application>
+
+</manifest>
