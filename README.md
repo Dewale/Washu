@@ -6,7 +6,7 @@
 
 Contributors>
 
-Adewale Adekoya
-Chris Kelly
-Trison Nguyen
+Adewale Adekoya |
+Chris Kelly |
+Trison Nguyen |
 Richard Liu
